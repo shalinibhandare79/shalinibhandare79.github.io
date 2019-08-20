@@ -1,0 +1,31 @@
+<div class="container box">
+    <div class="row">
+        <div class="col-sm-4 mb-2" ng-repeat="contactData in contactInfo | orderBy:'firstName' |filter:searchValue">
+            <div class="card bg-light shadow">
+                <!-- card body -->
+                <div class="card-body text-center">
+                    <img class="card-img-center img-fluid" src="../media/images/avtar1.png" alt="Card image"
+                        style="width:30%">
+                    <h5 class="">{{contactData.firstName}} {{contactData.lastName}}</h5>
+                    <p class="card-text">{{contactData.phone_no}} </p>
+
+                    <button class="btn btn-success" ng-click="view(contactData.id)" data-toggle="modal"
+                        data-target="#viewModal">
+                        <i class="fa fa-eye mr-2" aria-hidden="true"></i>View
+                    </button>
+
+                    <a ui-sref="addUpdateContact">
+                        <button class="btn btn-success" ng-click="openEdit(contactData.id)">
+                            <i class="fa fa-pencil mr-2" aria-hidden="true"></i>Edit
+                        </button>
+                    </a>
+
+                    <button class="btn btn-success" ng-click="removeItem(contactData.id)">
+                        <i class="fa fa-trash mr-2" aria-hidden="true"></i>Delete
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

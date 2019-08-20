@@ -1,0 +1,33 @@
+.contact-header-mar
+{
+    margin: 10px 0px 0px 800px;
+}
+
+.box
+{
+    margin:20px;
+}
+.red
+{
+    color: red;
+}
+
+.layout-box
+{
+  box-sizing: border-box;  
+  width: 40% !important;
+  height: auto;
+  padding: 30px;
+  margin:20px;  
+  border: 1px solid grey;
+}
+
+.white
+{
+    color:white;
+}
+
+.yellow
+{
+    color:yellow;
+}
